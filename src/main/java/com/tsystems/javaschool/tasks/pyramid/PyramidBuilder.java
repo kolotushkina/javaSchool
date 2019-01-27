@@ -55,9 +55,8 @@ public class PyramidBuilder {
 	/*
 	 * In each row we use one digit more than in the previous row, therefore for
 	 * calculating the height of the pyramid we can minus the size of the list 1 ,
-	 * then minus 2, then minus 3, etc., while the size of the list is more than 0.
-	 * At the end of the iterations inputSize should be equal to zero, otherwise we
-	 * can't build a pyramid
+	 * then minus 2, then minus 3, etc., while the size of the list is more or equal
+	 * to the pyramid height.
 	 */
 
 	private static int getPyramidHeight(int inputNumberSize) throws CannotBuildPyramidException {
