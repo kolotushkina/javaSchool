@@ -102,8 +102,8 @@ public class Calculator {
 			return (firstNumber * secondNumber);
 		case '/':
 			if (secondNumber == 0.0) {
-				return (null); // Dividing to zero is forbidden. In that case we put null in the numbers stack.
-								// If then null will be selected from the stack, exception will be thrown.
+				return (null); 	// Dividing to zero is forbidden. In that case we put null in the numbers stack.
+						// If then null will be selected from the stack, exception will be thrown.
 			}
 			return (firstNumber / secondNumber);
 		}
