@@ -16,13 +16,11 @@ public class PyramidBuilder {
 	 *         with given input
 	 */
 
-	public int[][] buildPyramid(List<Integer> inputNumbers)
-			throws CannotBuildPyramidException {
+	public int[][] buildPyramid(List<Integer> inputNumbers) throws CannotBuildPyramidException {
 
 		for (Integer inputNmber : inputNumbers) {
 			if (inputNmber == null) {
-				throw new CannotBuildPyramidException(
-						"You can't build a pyramid using these numbers");
+				throw new CannotBuildPyramidException("You can't build a pyramid using these numbers");
 			}
 		}
 
@@ -44,12 +42,9 @@ public class PyramidBuilder {
 		 */
 
 		for (int row = pyramidHeight - 1; row > -1; row--) {
-			for (int column = pyramidWidth - 1
-					- offsetFromSides; column >= offsetFromSides
-							&& inputNumbersListIndex <= inputNumbers
-									.size(); column -= 2) {
-				pyramid[row][column] = inputNumbers
-						.get(inputNumbers.size() - inputNumbersListIndex);
+			for (int column = pyramidWidth - 1 - offsetFromSides; column >= offsetFromSides
+					&& inputNumbersListIndex <= inputNumbers.size(); column -= 2) {
+				pyramid[row][column] = inputNumbers.get(inputNumbers.size() - inputNumbersListIndex);
 				inputNumbersListIndex++;
 			}
 			offsetFromSides++;
@@ -65,8 +60,7 @@ public class PyramidBuilder {
 	 * can't build a pyramid
 	 */
 
-	private static int getPyramidHeight(int inputNumberSize)
-			throws CannotBuildPyramidException {
+	private static int getPyramidHeight(int inputNumberSize) throws CannotBuildPyramidException {
 		int pyramidHeight = 0;
 		while (inputNumberSize > 0) {
 			inputNumberSize -= pyramidHeight;
@@ -74,8 +68,7 @@ public class PyramidBuilder {
 		}
 
 		if (inputNumberSize < 0) {
-			throw new CannotBuildPyramidException(
-					"You can't build a pyramid using these numbers");
+			throw new CannotBuildPyramidException("You can't build a pyramid using these numbers");
 		} else {
 			return pyramidHeight - 1;
 		}

@@ -37,9 +37,7 @@ public class Calculator {
 
 				if (Character.isDigit(currentCharacter)) {
 					String number = "";
-					while (i < statement.length()
-							&& (Character.isDigit(statement.charAt(i))
-									|| statement.charAt(i) == '.')) {
+					while (i < statement.length() && (Character.isDigit(statement.charAt(i)) || statement.charAt(i) == '.')) {
 						number += statement.charAt(i++);
 					}
 					i--;
@@ -52,8 +50,7 @@ public class Calculator {
 					}
 					operations.pop();
 				} else if (isOperation(currentCharacter)) {
-					while (!operations.isEmpty() && operationPriority(
-							operations.peek()) >= operationPriority(currentCharacter))
+					while (!operations.isEmpty() && operationPriority(operations.peek()) >= operationPriority(currentCharacter))
 						numbers.add(localEvaluate(numbers, operations.pop()));
 					operations.add(currentCharacter);
 				} else { // if character is some another symbol
@@ -88,8 +85,7 @@ public class Calculator {
 	}
 
 	private boolean isOperation(char currentCharacter) {
-		return (currentCharacter == '+' || currentCharacter == '-'
-				|| currentCharacter == '*' || currentCharacter == '/');
+		return (currentCharacter == '+' || currentCharacter == '-' || currentCharacter == '*' || currentCharacter == '/');
 	}
 
 	// The method processes 2 double type objects
@@ -106,10 +102,8 @@ public class Calculator {
 			return (firstNumber * secondNumber);
 		case '/':
 			if (secondNumber == 0.0) {
-				return (null); // Dividing to zero is forbidden. In that case we put
-								// null in the numbers stack. If then null will
-								// be selected from the stack, exception will be
-								// thrown.
+				return (null); // Dividing to zero is forbidden. In that case we put null in the numbers stack.
+								// If then null will be selected from the stack, exception will be thrown.
 			}
 			return (firstNumber / secondNumber);
 		}
