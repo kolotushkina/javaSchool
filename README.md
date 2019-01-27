@@ -11,11 +11,9 @@ The exam includes 3 tasks to be done: [Calculator](/tasks/Calculator.md), [Pyram
 
 ### Result ###
 
-* Author name : {PUT YOUR NAME HERE}
-* Codeship : {PUT YOUR CODESHIP BAGDE HERE}
+* Author name : Safiullin Raushan
+* Codeship : https://app.codeship.com/projects/1a50ad80-03a3-0137-681b-0eeb632b03d9/status?branch=master
 
-Example of Codeship badge. Please remove the example before you send us the link. 
-[ ![Codeship Status for tschool/javaschoolexam](https://app.codeship.com/projects/a9af8940-d130-0134-89a6-5e8aaaa2a5a2/status?branch=master)](https://app.codeship.com/projects/201451)
 
 
 ### How to start?  ###
